@@ -9,12 +9,13 @@
 	},
 	"main": "dist/index.js",
 	"scripts": {
-		"clean": "rimraf coverage build tmp src/**/*.js src/**/*.js.map test/**/*.js test/**/*.js.map",
+		"clean": "rimraf build tmp src/**/*.js src/**/*.js.map test/**/*.js test/**/*.js.map",
 		"build": "tsc -p ./tsconfig.json",
 		"build:release": "tsc -p ./tsconfig.release.json",
-		"start": "tsc -w -p ./tsconfig.json",
+		"build:watch": "tsc -w -p ./tsconfig.json",
+		"start": "ts-node ./run.ts",
 		"lint": "eslint . --ext .ts,.tsx",
-		"test": "jest --runInBand --forceExit --coverage",
+		"test": "jest --runInBand --forceExit",
 		"test:watch": "jest --runInBand --watchAll"
 	},
 	"dependencies": {
@@ -66,11 +67,6 @@
 			"json",
 			"node"
 		],
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-		"coverageDirectory": "coverage",
-		"collectCoverageFrom": [
-			"src/**/*.{ts,tsx}",
-			"!src/**/*.d.ts"
-		]
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$"
 	}
 }
