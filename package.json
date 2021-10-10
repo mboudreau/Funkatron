@@ -1,8 +1,9 @@
 {
-	"name": "funkatron",
-	"version": "0.0.1",
+	"name": "funkotron",
+	"version": "0.0.3",
 	"description": "Javacript Functional Programming Experiment",
-	"repository": "https://github.com/mboudreau/funkatron.git",
+	"keywords": ["funkotron", "functional programming", "functional", "fp"],
+	"repository": "https://github.com/mboudreau/funkotron.git",
 	"engines": {
 		"node": ">= 14.16 <15",
 		"npm": "^6.12.0"
