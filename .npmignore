@@ -1,5 +1,5 @@
-# Transpiled files
-build/
+# Source files
+*.ts
 
 # Node Modules
 node_modules/
@@ -21,9 +21,3 @@ npm-debug.log
 
 # Misc
 .DS_Store
-
-# Typescript Compilation
-src/**/*.js
-src/**/*.js.map
-test/**/*.js
-test/**/*.js.map

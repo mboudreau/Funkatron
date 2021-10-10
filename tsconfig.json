@@ -20,10 +20,11 @@
 		"noImplicitAny": false,
 		"noImplicitThis": false,
 		"esModuleInterop": true,
-		"outDir": "build"
 	},
 	"include": [
-		"src/**/*",
-		"test/**/*"
+		"**/*"
+	],
+	"exclude": [
+		"node_modules"
 	]
 }

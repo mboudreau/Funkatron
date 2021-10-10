@@ -24,7 +24,5 @@ npm-debug.log
 .DS_Store
 
 # Typescript Compilation
-src/**/*.js
-src/**/*.js.map
-test/**/*.js
-test/**/*.js.map
+**/*.js
+**/*.js.map

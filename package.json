@@ -1,15 +1,15 @@
 {
 	"name": "funkatron",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Javacript Functional Programming Experiment",
 	"repository": "https://github.com/mboudreau/funkatron.git",
 	"engines": {
 		"node": ">= 14.16 <15",
 		"npm": "^6.12.0"
 	},
-	"main": "dist/index.js",
+	"main": "index.js",
 	"scripts": {
-		"clean": "rimraf build tmp src/**/*.js src/**/*.js.map test/**/*.js test/**/*.js.map",
+		"clean": "rimraf build tmp **/*.js **/*.js.map",
 		"build": "tsc -p ./tsconfig.json",
 		"build:release": "tsc -p ./tsconfig.release.json",
 		"build:watch": "tsc -w -p ./tsconfig.json",

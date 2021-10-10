@@ -3,7 +3,7 @@ import "./prototype";
 describe("prototype", () => {
 	test("FizzBuzz test", async () => {
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
-		const fizzbuzz = require("../test/fizzbuzz.json");
+		const fizzbuzz = require("./test/fizzbuzz.json");
 		expect(
 			Array.from(new Array(100))
 				.funk()

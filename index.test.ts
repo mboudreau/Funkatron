@@ -3,7 +3,7 @@ import funk from "./index";
 describe("Funkotron", () => {
 	test("FizzBuzz test", async () => {
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
-		const fizzbuzz = require("../test/fizzbuzz.json");
+		const fizzbuzz = require("./test/fizzbuzz.json");
 		expect(
 			funk(Array.from(new Array(100)))
 				.map((_, index) => 100 - index)
