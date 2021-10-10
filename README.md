@@ -60,19 +60,29 @@ There are 2 ways to use this library, either by importing it:
 import funk from "funkotron";
 
 const array = [1, 2, 3, 4];
-const result = funk(array)
-                .map(v => v * 3)
-                .map(v => `value: ${v}`)
-                .done();
+const result = funk(Array.from(new Array(100)))
+				.map((_, index) => 100 - index)
+				.map(v => v % 5 + v % 3 === 0 ? "fizzbuzz" : v)
+				.map(v => v % 3 === 0 ? "fizz" : v)
+				.map(v => v % 5 === 0 ? "buzz" : v)
+				.done()
 ```
 
 Or by setting the `Array.prototype` globally:
 
 ```
 import "funkotron/prototype";
-const result = [1, 2, 3, 4]
-    .funk()
-    .map(v => v * 3)
-    .map(v => `value: ${v}`)
-    .done();
+const result = Array.from(new Array(100))
+				.funk()
+				.map((_, index) => 100 - index)
+				.map(v => v % 5 + v % 3 === 0 ? "fizzbuzz" : v)
+				.map(v => v % 3 === 0 ? "fizz" : v)
+				.map(v => v % 5 === 0 ? "buzz" : v)
+				.done()
 ```
+
+## Disclaimer
+
+This is not production ready code and would need a much better way to do things.  This was simply an experiment on how to potentially make functional programming much faster.  It is not a complete library and only supports 3 functions (map, forEach and filter) and there needs lots of typing improvements to make it easier to work with in Typescript.
+
+Use at your own peril.
