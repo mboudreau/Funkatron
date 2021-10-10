@@ -1,6 +1,5 @@
 # Transpiled files
 build/
-dist/
 
 # Node Modules
 node_modules/
